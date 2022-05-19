@@ -1,0 +1,1 @@
+2eb2aa385b4ca9c775ace4d34c93ce58cef6c57fe625e0fa39c8738efa7deb3a  ./target/wasm32-unknown-unknown/release/moon.wasm

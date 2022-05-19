@@ -1,0 +1,73 @@
+{
+  "name": "moon",
+  "developer": {
+    "archwayd": {
+      "docker": false
+    },
+    "scripts": {
+      "test": "cargo unit-test",
+      "build": "cargo build",
+      "optimize": "cargo run-script optimize",
+      "wasm": "cargo wasm",
+      "query": "archwayd query wasm",
+      "tx": "archwayd tx wasm execute"
+    },
+    "deployments": [
+      {
+        "type": "set-metadata",
+        "chainId": "torii-1",
+        "contract": "archway1kkgurxe9qmzjc9gasy7k3020uty0sgtxpkth54tk4x5rnd4z2x6qwx2gvx",
+        "contractMetadata": {
+          "developerAddress": "archway15x3z0udcz6zg2dapa3qxp8wxu3gr24x0raw5tm",
+          "rewardAddress": "archway15x3z0udcz6zg2dapa3qxp8wxu3gr24x0raw5tm",
+          "gasRebate": true
+        }
+      },
+      {
+        "type": "instantiate",
+        "chainId": "torii-1",
+        "codeId": 50355,
+        "address": "archway1kkgurxe9qmzjc9gasy7k3020uty0sgtxpkth54tk4x5rnd4z2x6qwx2gvx",
+        "admin": "archway15x3z0udcz6zg2dapa3qxp8wxu3gr24x0raw5tm"
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 50355
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 50354
+      }
+    ]
+  },
+  "network": {
+    "name": "torii",
+    "chainId": "torii-1",
+    "type": "testnet",
+    "fees": {
+      "feeDenom": "utorii"
+    },
+    "gas": {
+      "prices": "0.01utorii",
+      "mode": "auto",
+      "adjustment": "1.4"
+    },
+    "wasm": {
+      "bech32Hrp": "archway",
+      "archwayd": "0.0.4",
+      "configDir": ".archway",
+      "binary": "archwayd"
+    },
+    "urls": {
+      "rpc": {
+        "url": "https://rpc.torii-1.archway.tech",
+        "port": 443
+      },
+      "faucets": [
+        "https://faucet.torii-1.archway.tech"
+      ]
+    }
+  }
+}

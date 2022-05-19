@@ -1,0 +1,1 @@
+/home/archway/moon/target/debug/examples/schema: /home/archway/moon/examples/schema.rs /home/archway/moon/src/contract.rs /home/archway/moon/src/error.rs /home/archway/moon/src/lib.rs /home/archway/moon/src/msg.rs /home/archway/moon/src/state.rs
